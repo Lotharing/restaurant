@@ -1,0 +1,29 @@
+<!--pages/menu/menu.wxml-->
+<view class='container' style='width:{{width}}px; height:{{height}}px'>
+
+  <view class='top'  style='width:{{topW}}px; height:{{topH}}px'>
+    <view class='order' wx:if='{{!isNull}}' style='margin-left:{{paddingSize}}px; margin-right:{{paddingSize}}px'>
+      <text style='width:{{nameTextW}}px;padding-right:{{paddingSize}}px'>{{currentOrder.foodName}}</text>
+      <text style='width:{{numTextW}}px;'>{{currentOrder.number}}</text>
+      <button class='receive' style='padding-left:{{paddingSize}}px;width:{{btnW}}px;' bindtap='receive' bindtap='receive'>接受</button>
+    </view>
+  </view>
+
+  <view class='center' style='width:{{centerW}}px; height:{{centerH}}px;'>
+    <scroll-view style='display:flex; width:100%; height:100%;' scroll-with-animation="true" scroll-y='true'>
+      <view class='block' style='width:{{blockW}}px; height:{{blockH}}px; margin-left:{{paddingSize}}px; margin-top:{{paddingSize}}px; padding-top:{{paddingSize}}px;background:{{item.changeNum == 0?"#e4e4e4":"#045757"}}' wx:for='{{order}}' wx:key='' wx:if='{{item.number>0?true:false}}'>
+        <view style='height:{{blockItemH}}px;'>{{item.foodName}}</view>
+        <view style='height:{{blockItemH}}px;'>当前数量:{{item.number}}</view>
+        <view style='display:flex; align-items:center; height:{{blockItemH}}px;'>
+          <view style='width:{{countW}}px' data-index='{{index}}' bindtap='reduce'>-</view>
+          <view style='width:{{countW}}px'>{{item.changeNum}}</view>
+          <view style='width:{{countW}}px' data-index='{{index}}' bindtap='add'>+</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='bottom' style='width:{{bottomW}}px; height:{{bottomH}}px'>
+    <button class='notice' bindtap='notice'>通知</button>
+  </view>
+</view>

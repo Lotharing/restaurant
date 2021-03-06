@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container" style='width:{{width}}px; height:{{height}}px'>
+    <view class='block'>
+        <text>账号</text><input type='text' style='width:{{inputWidth}}px; height:{{inputHeight}}px; padding-left:5px;' bindinput='getId'></input>
+    </view>
+    <view class='block'>
+        <text>密码</text><input type='text' password='true' style='width:{{inputWidth}}px; height:{{inputHeight}}px; padding-left:5px;' bindinput='getPwd'></input>
+    </view>
+    <button style='width:{{btnWidth}}px; height:{{btnHeight}}px; margin-top:25px;' bindtap='login'>登陆</button>
+</view>

@@ -1,0 +1,38 @@
+/* pages/menu/menu.wxss */
+.container{
+  display: inline;
+}
+.top{
+  text-align: center;
+  background: #045757;
+  display: flex;
+  align-items:Center;
+}
+.receive{
+  float: right;
+}
+.order{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items:Center;
+  background: #fff;
+}
+.block{
+  background:#e4e4e4;
+  float:left;
+  text-align: center;
+}
+.bottom{
+  display: flex;
+  align-items:Center;
+}
+.notice{
+    background: rgb(255,214,0);
+    color: #fff;
+}
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+    color: transparent;
+}

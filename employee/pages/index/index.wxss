@@ -1,0 +1,19 @@
+/**index.wxss**/
+.container{
+    justify-content: initial;
+    background: #333;
+}
+input{
+    background: #faf7f7;
+    border-color: rgb(37, 39, 39);
+}
+button{
+    background: rgb(9, 94, 83);
+    color: #fff;
+}
+text{
+    color: #fff;
+}
+.block{
+    margin-bottom: 5px;
+}
