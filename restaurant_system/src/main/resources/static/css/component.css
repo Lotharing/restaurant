@@ -1,0 +1,83 @@
+.btn {
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.littleBtn{
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.littleBtn:hover{
+    box-shadow: 1px 1px 2px #33333388;
+}
+
+/*只有文字的btn*/
+.noneBtn{
+    border: none; 
+    background: #00000000;
+    color: #fff;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.select{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    font-size:15px;
+    height:30px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    outline:0;
+}
+
+.text{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    font-size:15px;
+    height:30px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+    outline:0;
+}
+
+/*黑*/
+.firstColor{
+    background: #222222;
+}
+/*绿*/
+.secondColor{
+    background: #044343;
+}
+/*灰*/
+.thirdColor{
+    background: #e4e4e4;
+}
+/*浅绿*/
+.fourthColor{
+    background: #045757;   
+}
+/*白*/
+.fifthColor{
+    background: #fff;
+}

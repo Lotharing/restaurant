@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+	<title>主页</title>
+	<script type="text/javascript" src="../jquery-3.3.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/home.css">
+	<link rel="stylesheet" type="text/css" href="../css/component.css">
+	<!-- layui -->
+  	<script type="text/javascript" src="../layui/layui.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+</head>
+<body class="content">
+	<div class="left firstColor">
+		<!-- <ul class="layui-nav layui-nav-tree" > -->
+		<ul class="layui-nav layui-nav-tree layui-nav-side firstColor" lay-filter="test">
+			<li class="layui-nav-item">
+				<a href="html/information.html" target="innerPage">主页</a>
+			</li>
+  			<li class="layui-nav-item layui-nav-itemed">
+    			<a>餐厅信息</a>
+    			<dl class="layui-nav-child">
+      				<dd><a href="html/windowEdit.html" target="innerPage">餐厅窗口编辑</a></dd>
+      				<dd><a href="html/infoEdit.html" target="innerPage">食物信息编辑</a></dd>
+    			</dl>
+  			</li>
+  			<li class="layui-nav-item">
+    			<a href="html/order.html" target="innerPage">订单信息</a>
+  			</li>
+  			<li class="layui-nav-item">
+  				<a href="html/suggest.html" target="innerPage">意见反馈</a>
+  			</li>
+  			<li class="layui-nav-item">
+  				<a href="html/exit.html" target="innerPage">退出系统</a>
+  			</li>
+		</ul>
+	</div>
+	<div class="right thirdColor">
+		<iframe src="html/information.html" class="innerPage thirdColor" frameborder="no" border="0" name="innerPage"></iframe>
+	</div>
+	<script>
+		layui.use('element', function(){
+  			var element = layui.element;
+		});
+</script>
+</body>
+</html>

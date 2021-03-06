@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登陆</title>
+	<!-- jquery -->
+  	<script type="text/javascript" src="../jquery-3.3.1.js"></script>
+  	<!-- layui -->
+  	<script type="text/javascript" src="../layui/layui.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+</head>
+<body style="text-align: center;">
+	<div style="width: 20%; margin: 0 auto; margin-top: 10%; background: #333333; padding: 40px; border-radius: 3px;">
+		<input type="text" name="title" required  lay-verify="required" placeholder="账号" autocomplete="off" class="layui-input id" style="margin-bottom: 20px;">
+		<input type="password" name="password" required lay-verify="required" placeholder="密码" autocomplete="off" class="layui-input pwd" style="margin-bottom: 20px;">
+		<button class='layui-btn' style="width: 100%" onclick="login()">登陆</button>
+	</div>
+	<script type="text/javascript">
+		function login(){
+			var id = $('.id').val();
+			var pwd = $('.pwd').val();
+			$.ajax({
+				url: 'http://localhost:8080/employeeLogin?id='+id+"&pwd="+pwd,
+				type: 'get',
+				success:function(res){
+					if (res == 0) {
+						//window.sessionStorage.setItem("id", id);
+						window.location.href="http://localhost:8080/start";
+					}else{
+						alert("账号或密码不对");
+					}
+				}
+			})
+			
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../mdui/css/mdui.css">
+  	<script type="text/javascript" src="../mdui/js/mdui.js"></script>
+  	<script type="text/javascript" src="../jquery-3.3.1.js"></script>
+</head>
+<body>
+	<div class="mdui-dialog" id="dialog">
+    <div class="mdui-dialog-title">确认退出系统？</div>
+    <div class="mdui-dialog-content">你将退回到登陆页面</div>
+    <div class="mdui-dialog-actions">
+      <button class="mdui-btn mdui-ripple" mdui-dialog-cancel>取消</button>
+      <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>确认</button>
+    </div>
+  </div>
+  <script type="text/javascript">
+  	var inst = new mdui.Dialog('#dialog');
+  			inst.open();
+		var dialog = document.getElementById('dialog');
+		dialog.addEventListener('cancel.mdui.dialog', function () {
+  			inst.close();
+		});
+
+		dialog.addEventListener('confirm.mdui.dialog', function () {
+		  	//要求后台清空session
+		  	$.ajax({
+		  		url: 'http://localhost:8080/exit',
+				type: 'get',
+				success:function(res){
+					window.parent.location.reload();
+				}
+		  	})	
+		});
+  </script>
+</body>
+</html>

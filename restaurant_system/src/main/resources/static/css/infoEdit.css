@@ -1,0 +1,62 @@
+.top{
+	text-align: right;
+}
+.center{
+	width: 100%;
+}
+th{
+	padding: 10px;
+	font-weight: normal;
+}
+.file{
+	display: none;
+}
+.delBtn, .editBtn{
+	margin: 0;
+	padding: 0;
+	border: 1px solid transparent;
+	outline: none;   
+	background: #fff;
+}
+.saveBtn, .cancelDelBtn, .removeBtn, .cancelAddBtn{
+	display: none;
+}
+.addBtn{
+	background: #24936E;
+}
+.addBtn:hover{
+	background: #24936E99;
+}
+.batchDelBtn, .removeBtn{
+	background: #c53d43;
+}
+.batchDelBtn:hover, .removeBtn:hover{
+	background: #c53d4399;
+}
+.saveBtn{
+	background: #2a83a2;
+}
+.saveBtn:hover{
+	background: #2a83a299;
+}
+.cancelDelBtn, .cancelAddBtn{
+	background: #595857;
+}
+.cancelDelBtn:hover, .cancelAddBtn:hover{
+	background: #59585799;
+}
+.theadA, .columnA{
+	display: none;
+}
+.editOrSaveBtn,.delOrCancelBtn{
+	border: none;
+	background: #1c1c1c00;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.editOrSaveBtn{
+	color:#24936E99;
+}
+.delOrCancelBtn{
+	color:#c53d4399;
+}

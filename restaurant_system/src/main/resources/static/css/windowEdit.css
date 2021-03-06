@@ -1,0 +1,56 @@
+body, html{
+	width: 100%;
+	margin: 0;
+	height: 100%;
+}
+.left{
+	width:80%;
+	float: left;
+	height: 100%;
+}
+.right{
+	width:20%;
+	float: left;
+	height: 100%;
+}
+.window{
+	width: 20%;
+	height: 35%;
+	float: left;
+	margin-left: 3%;
+	background: #fff;
+	margin-bottom: 2%;
+}
+.window:hover{
+	box-shadow: 3px 3px 4px #33333366;
+	cursor: pointer;
+}
+.addWindow{
+	width: 100%;
+	height: 100%;
+}
+.delWindow{
+	float: right;
+	margin: 5px;
+	width: 20%;
+}
+.editIntrodction, .editName{
+	width: 20%;
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.introdction, .name{
+	text-align: center;
+	padding-top: 10px;
+	color: #595857;
+	width: 60%;
+	margin-left: 15px;
+	background: #59585733;
+	border: none;
+	resize:none;
+}
+.introdction{
+	height: 80%;
+}

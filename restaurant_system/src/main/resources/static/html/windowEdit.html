@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+	<title></title>
+	<script type="text/javascript" src="../js/windowEdit.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/windowEdit.css">
+  	<link rel="stylesheet" type="text/css" href="../css/component.css">
+  	<!-- jquery -->
+  	<script type="text/javascript" src="../jquery-3.3.1.js"></script>
+  	<!-- layui -->
+  	<script type="text/javascript" src="../layui/layui.js"></script>
+  	<link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+  	<link rel="stylesheet" type="text/css" href="../mdui/css/mdui.css">
+  	<script type="text/javascript" src="../mdui/js/mdui.js"></script>
+</head>
+<body>
+	<div class="mdui-dialog" id="editDialog" style="width:50%; padding: 20px;">
+		<div class="mdui-dialog-title">修改窗口信息</div>
+		<div class="mdui-textfield" style="padding: 25px;">
+  			<input class="mdui-textfield-input nameText" type="text" placeholder="餐厅名称"/>
+		</div>
+		<div class="mdui-textfield" style="padding: 25px;">
+  			<input class="mdui-textfield-input introductionText" type="text" placeholder="餐厅介绍" />
+		</div>
+  		<div class="mdui-dialog-actions">
+    		<button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+    		<button class="mdui-btn mdui-ripple" mdui-dialog-confirm onclick="save()">保存</button>
+  		</div>
+	</div>
+
+	<div class="mdui-dialog" id="addDialog" style="width:50%; padding: 20px;">
+		<div class="mdui-dialog-title">添加窗口信息</div>
+		<div class="mdui-textfield" style="padding: 25px;">
+  			<input class="mdui-textfield-input textName" type="text" placeholder="餐厅名称"/>
+		</div>
+		<div class="mdui-textfield" style="padding: 25px;">
+  			<input class="mdui-textfield-input textIntroduction" type="text" placeholder="餐厅介绍" />
+		</div>
+  		<div class="mdui-dialog-actions">
+    		<button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+    		<button class="mdui-btn mdui-ripple" mdui-dialog-confirm onclick="addWindow()">保存</button>
+  		</div>
+	</div>
+	<div class="left windowInfo thirdColor">
+<!-- 
+		<div class="mdui-card window">
+  			<div class="mdui-card-media" style="height: 60%;">
+    			<img src="d:/photo/other/1.jpg" style="height: 100%;" />
+    			<div class="mdui-card-menu" style="top: 8px; right: 8px;">
+      				<button class="mdui-btn mdui-btn-icon mdui-text-color-white" onclick="delWindow()"><i class="mdui-icon material-icons">&#xe872;</i></button>
+    			</div>
+  			</div>
+  			<div class="mdui-card-primary" style="height:40%;padding: 8px 0px 0px 8px;">
+    			<div class="mdui-card-primary-title">Title</div>
+    				<div class="mdui-card-primary-subtitle">Subtitle</div>
+  			</div>
+		</div> -->
+
+		<!-- <div class="mdui-card window">
+			<div class="mdui-card-media" style="height: 60%;">
+				<img class="head" style="height: 100%;" />
+				<div class="mdui-card-menu" style="top: 2px; right: 2px;">
+					<button class="mdui-btn mdui-btn-icon mdui-text-color-white delWindow" onclick="delWindow(this)">
+						<i class="mdui-icon material-icons">&#xe872;</i>
+					</button>
+				</div>
+			</div>
+			<div onclick="edit(this)" mdui-dialog="{target: \'#editDialog\'}" class="mdui-card-primary edit" style="height:40%;padding: 8px 0px 0px 8px;">
+				<div class="mdui-card-primary-title">'+res[element].windowName+'</div>
+				<div class="mdui-card-primary-subtitle">'+res[element].windowIntroduction+'</div>
+			</div>
+		</div> -->
+
+
+		<!-- <div class="window"><button class="addWindow noneBtn" mdui-dialog="{target: \'#editDialog\'}"><i class="layui-icon" style="width: 30%; height: 30%; color: #333">&#xe654;</i></button></div> -->
+	</div>
+	<div class="right thirdColor">
+		<div style="padding: 5px;">
+			<label style="font-size: 20px; font-weight: bold; color: #044343">菜品种类</label>
+		</div>
+		<div class="foodType">
+			<button onclick="addType()" class="addTypeBtn littleBtn" style="background: #595857;">添加</button>
+		</div>
+	</div>
+</body>
+</html>
