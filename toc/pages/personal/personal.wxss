@@ -1,0 +1,21 @@
+/* pages/personal/personal.wxss */
+.container{
+    display:block;
+    padding: 0;
+    background: rgba(0,0,0,0.12);
+}
+.top{
+    display: flex;
+}
+.addressBtn, .orderBtn, .suggestBtn{
+    background: #fff;
+    margin-bottom:1px;
+    display: flex;
+    align-items: center;
+}
+.exitBtn{
+    background: #fff;
+    margin-bottom:1px;
+    display: flex;
+    align-items: center;
+}

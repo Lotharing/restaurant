@@ -1,0 +1,32 @@
+/* pages/shopCar/shopCar.wxss */
+.actionBar{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.top{
+   background: rgba(0,0,0,0.12);
+}
+.item{
+    background: rgb(255,255,255);
+    display: flex;
+}
+.bottom{
+    background: rgb(255,255,255);
+}
+.needPay{
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    font-size: 20px;
+    color: #e41c1c;
+}
+.pay{
+    border-radius: 5%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: #fff;
+}

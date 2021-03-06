@@ -1,0 +1,4 @@
+<view style='width:100%; text-align:center;'>
+    <view style='width:100%; font-size:30px;'>{{foodName}}</view>
+    <view style='width:100%; font-size:50px; font-weight:blod'>编号：{{takeMealCode}}</view>
+</view>

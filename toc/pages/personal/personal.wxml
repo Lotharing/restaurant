@@ -1,0 +1,13 @@
+<!--pages/personal/personal.wxml-->
+<view class='container'>
+    <view class='top actionBar' style='padding:{{paddingSize}}px;'>
+        <image class='headImg' style='width:{{imgWidth}}px; height:{{imgHeight}}px; margin-right:{{marginSize}}px;' src='{{userHead}}' bindtap='login'></image>
+        <view class='idText' style='width:{{textWidth}}px; height:{{textHeight}}px;'>{{userName}}</view>
+    </view>
+    <view class='bottom'>
+        <view class='orderBtn' style='width:{{btnWidth}}px; height:{{btnHeight}}px;padding-left:{{paddingSize}}px; padding-right:{{paddingSize}}px;' bindtap='waitingOrder'>待取订单</view>
+        <view class='orderBtn' style='width:{{btnWidth}}px; height:{{btnHeight}}px;padding-left:{{paddingSize}}px; padding-right:{{paddingSize}}px;' bindtap='doingOrder'>待发货订单</view>
+        <view class='orderBtn' style='width:{{btnWidth}}px; height:{{btnHeight}}px;padding-left:{{paddingSize}}px; padding-right:{{paddingSize}}px;' bindtap='finishedOrder'>已完成订单</view>
+        <view class='suggestBtn' style='width:{{btnWidth}}px; height:{{btnHeight}}px;padding-left:{{paddingSize}}px; padding-right:{{paddingSize}}px;' bindtap='suggest'>意见建议</view>
+    </view>
+</view>

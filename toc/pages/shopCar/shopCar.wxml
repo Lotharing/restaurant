@@ -1,0 +1,23 @@
+<!--pages/shopCar/shopCar.wxml-->
+<view class='actionBar' style='height:{{actionBarHeight}}px;'>
+    <view class='personal' bindtap='jumpToPersonal'>我的</view>
+</view>
+<view style='top:{{actionBarHeight}}px; position: absolute; width:100%;'>
+    <scroll-view class='top' style='height:{{topHeight}}px;' scroll-with-animation="true" scroll-y='true'>
+        <view class='item' style='padding:{{paddingSize}}px; margin-top: {{marginSize/8}}px;' wx:for='{{shopCar}}' wx:key=''>
+            <image class='img' src='{{item.img}}' style='height:{{imgHeight}}px; width:{{imgWidth}}px;margin-right:{{paddingSize}}px;' ></image>
+            <view style='height:{{textBlockHeight}}px;width:{{textBlockWidth}}px; margin-right:{{paddingSize}}px;'>
+                <view class='name primaryText'>{{item.name}}</view>
+            </view>
+            <view style='height:{{numBlockHeight}}px; width:{{numBlockWidth}}px; text-align: right;'>
+                <view class='price disabledText' style='height:{{paddingSize}}px;'>单价:{{item.price}}  数量:{{item.num}}</view>
+                <view class='allPrice secondaryText' style='height:{{paddingSize * 2}}px;'>总计:{{item.allPrice}}</view>
+                <view class='delBtn' style='height:{{paddingSize * 2}}px;' bindtap='remove' data-id='{{item.id}}'>删除</view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class='bottom' style='height:{{bottomHeight}}px;'>
+        <view class='needPay' style='width:{{btnWidth}}px; height:{{btnHeight}}px; margin:{{paddingSize}}px;'>总计:{{needPay}}</view>
+        <view class='pay button' style='width:{{btnWidth}}px; height:{{btnHeight}}px; margin:{{paddingSize}}px' bindtap='pay'>支付</view>
+    </view>
+</view>

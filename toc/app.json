@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/windowFoodInfo/windowFoodInfo",
+    "pages/shopCar/shopCar",
+    "pages/login/login",
+    "pages/suggest/suggest",
+    "pages/finishedOrder/finishedOrder",
+    "pages/waitingOrder/waitingOrder",
+    "pages/doingOrder/doingOrder",
+    "pages/takeMealCode/takeMealCode"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

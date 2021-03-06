@@ -1,0 +1,19 @@
+<!--pages/order/order.wxml-->
+<scroll-view scroll-with-animation="true" scroll-y='true' style='width:{{width}}px; height:{{height}}px;'>
+    <view wx:for='{{order}}' wx:key='' class='order' style='margin:{{paddingSize}}px'>
+        <view  style='margin:{{paddingSize}}px'>
+            <image src='{{item.img}}' style='width:{{imgW}}px; height:{{imgH}}px;'></image>
+        </view>
+        <view  style='margin:{{paddingSize}}px'>
+            <view class='date disabledText' style='width:{{dateW}}px; height:{{dateH}}px;'>订单创建时间</view>
+            <view style='display:flex'>
+                <view class='foodName primaryText' style='width:{{nameW}}px; height:{{nameH}}px; margin-right:{{paddingSize}}px;'>{{order[index].foodName}}</view>
+                <view style='margin-left:{{paddingSize}}px;'>
+                    <view class='number secondaryText' style='width:{{textW}}px; height:{{textH}}px;'>数量:{{item.number}}</view>
+                    <view class='price secondaryText' style='width:{{textW}}px; height:{{textH}}px;'>单价:{{item.price}}</view>
+                    <view class='allPrice secondaryText' style='width:{{textW}}px; height:{{textH}}px;'>总价:{{item.allPrice}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

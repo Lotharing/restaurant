@@ -1,0 +1,51 @@
+/* pages/restaurant_info/restaurant_info.wxss */
+.container{
+   display:block;
+   padding: 0;
+}
+.top{
+    background: rgb(0,121,107);
+    display: flex;
+    padding: 0;
+    color: #fff;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.left{
+    position: fixed; 
+    background: rgb(245,245,245);
+}
+
+.right{ 
+    float: right; 
+}
+.foodType{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.foodInfo{
+    display: flex;
+}
+.foodName{
+    font-size: 20px;
+}
+.foodPrice{
+    font-size: 15px;
+}
+.foodCount{
+    float: right;
+    flex-direction: row;
+    display: flex;
+}
+
+.floatingActionBtn{
+    position: fixed;
+    border-radius: 50%;
+    background: rgb(255,214,0);
+}

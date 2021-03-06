@@ -1,0 +1,6 @@
+<view style='width:100%; height:{{height}}px;'>
+<form bindsubmit='suggest'>
+    <textarea placeholder="请输入建议" style='width:100%; height:{{textH}}px; background:#fff; padding-left:10px;padding-right:10px' bindblur='content' focus='{{focus}}'></textarea>
+    <button style='width:100%; height:{{btnH}}px' form-type='submit'>提交</button>
+</form>
+</view>

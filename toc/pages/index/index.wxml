@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class='actionBar' style='height:{{actionBarHeight}}px;'>
+    <view class='personal' bindtap='jumpToPersonal'>我的</view>
+</view>
+<scroll-view class='container' style='height:{{scrollHeight}}px; top:{{actionBarHeight}}px;' scroll-with-animation="true" scroll-y='true' bindscroll="scrolling">
+    <!-- 顶部广告轮播图 -->
+    <view class='top'>
+        <swiper class='adCarousel' autoplay='true' circular='true' style='height:{{adCarouselHeight}}px;'>
+            <!-- 通过后台获得图片 -->
+            <!-- 测试效果 -->
+            <swiper-item wx:for='{{windowImgs}}' wx:key=''>
+                <image class='adImgs' src='{{windowImgs[index].url}}'></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 餐厅窗口列表,通过后台获取 -->
+    <view class='center'>
+        <view class='windowList'  wx:for='{{windowInfo}}' wx:key='windowInfo' bindtap='jumpToWindowFoodInfo' data-name='{{item.windowName}}' data-content='{{item.windowIntroduction}}' data-number='{{item.restaurantWindowNumber}}' data-img='{{windowImgs[index].url}}' style='width:{{cardWidth}}px; padding:{{paddingSize}}px; margin-top:{{marginSize/8}}px;'>
+            <view class='windowText' style='width:{{textWidth}}px; margin-right:{{paddingSize*2}}px;'>
+                <view class='windowTitle primaryText' style='width:{{textWidth}}px;'>{{item.windowName}}</view>
+                <view class='windowIntroduction disabledText' style='width:{{textWidth}}px; margin-top:{{paddingSize}}px; height:{{paddingSize * 4}}px;'>{{item.windowIntroduction}}</view>
+            </view>
+            <image src='{{windowImgs[index].url}}' class='windowImg' style='width:{{imgWidth}}px; height:{{imgHeight}}px'></image>
+        </view>
+    </view>
+    <view class='floatingActionBtn button' style='right:{{paddingSize}}px; bottom:{{paddingSize}}px; width:{{floatingActionBtnWidth}}px; height:{{floatingActionBtnHeight}}px; display:{{display}}' bindtap='jumpToShopCar'>
+    <image src='../images/shopCar.png' style='width:40%;height:40%;padding:30%;'></image>
+    </view>
+</scroll-view>

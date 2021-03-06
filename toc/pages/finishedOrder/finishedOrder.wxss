@@ -1,0 +1,11 @@
+/* pages/order/order.wxss */
+scroll-view{
+    background: rgba(0,0,0,0.12);
+}
+.order{
+    background: rgb(255,255,255);
+    display: flex;
+}
+.number, .price, .allPrice{
+    text-align: right;
+}
